@@ -1,13 +1,11 @@
 import React from 'react';
 import { Header } from './components/Header';
-import { YourTrip } from './components/YourTrip';
-import './App.css';
+import { YourNextTrip } from './components/YourTrip';
 
 const App = () => (
-
   <div className="App">
     <Header />
-    <YourTrip />
+    <YourNextTrip />
   </div>
 );
 

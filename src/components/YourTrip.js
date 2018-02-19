@@ -1,35 +1,24 @@
 import React from 'react';
 import { Grid} from 'semantic-ui-react'
+import { connect } from 'react-redux';
 
 import { Routes } from './Routes';
 import { NextBus } from './NextBus';
 
-export class YourTrip extends React.Component {
+class YourTrip extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      posts: [],
-    }
-  }
-  
-  componentDidMount() {
-
-    fetch('json/route-list.json')
-      .then((response) => response.json())
-      .then((json) =>
-        console.log('parsed json', json)
-      ).catch(function (ex) {
-        console.log('parsing failed', ex)
-      })
-  
+    this.state = {}
   }
 
   render() {
+    const { routes } = this.props;
+    //const { blueprint, dispatch } = this.props; routeList, routeStops, stopPredication 
     return (
       <Grid container>
         <Grid.Column width={3} />
         <Grid.Column width={10}>
-          <Routes />
+          <Routes routes={routes} />
           <NextBus />
         </Grid.Column>
         <Grid.Column width={3} />
@@ -37,4 +26,29 @@ export class YourTrip extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  const routes = state;
+  console.log('connect state', state)
+  return {
+    routes,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => (
+  {
+    onMessageClick: (id) => (
+      dispatch({
+        type: 'DELETE_MESSAGE',
+        id: id,
+      })
+    ),
+    dispatch: dispatch,
+  }
+);
+
+export const YourNextTrip = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(YourTrip);
 
