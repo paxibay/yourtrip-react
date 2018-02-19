@@ -1,0 +1,424 @@
+{
+  "route": {
+    "latMax": "43.75708",
+    "stop": [
+      {
+        "lon": "-79.51339",
+        "title": "Jane St At Sheppard Ave West",
+        "stopId": "3921",
+        "tag": "2567",
+        "lat": "43.7395299"
+      },
+      {
+        "lon": "-79.5166999",
+        "title": "2002-2012 Sheppard Ave West",
+        "stopId": "6057",
+        "tag": "7765",
+        "lat": "43.73871"
+      },
+      {
+        "lon": "-79.5199699",
+        "title": "Sheppard Ave West At Laura Rd",
+        "stopId": "6079",
+        "tag": "1351",
+        "lat": "43.73796"
+      },
+      {
+        "lon": "-79.52358",
+        "title": "Sheppard Ave West At Oakdale Rd",
+        "stopId": "6085",
+        "tag": "2823",
+        "lat": "43.7371499"
+      },
+      {
+        "lon": "-79.52934",
+        "title": "Arrow Rd At Sheppard Ave West North Side",
+        "stopId": "11858",
+        "tag": "6161",
+        "lat": "43.7363199"
+      },
+      {
+        "lon": "-79.52972",
+        "title": "Arrow Rd At Bartor Rd North Side",
+        "stopId": "7513",
+        "tag": "5326",
+        "lat": "43.73782"
+      },
+      {
+        "lon": "-79.53064",
+        "title": "Arrow Rd At Lido Rd",
+        "stopId": "7500",
+        "tag": "9294",
+        "lat": "43.74146"
+      },
+      {
+        "lon": "-79.52937",
+        "title": "Opposite 700 Arrow Rd",
+        "stopId": "10470",
+        "tag": "7607",
+        "lat": "43.7454199"
+      },
+      {
+        "lon": "-79.53026",
+        "title": "Arrow Rd At Deerhide Cres (South)",
+        "stopId": "7495",
+        "tag": "8832",
+        "lat": "43.7476399"
+      },
+      {
+        "lon": "-79.5325699",
+        "title": "Arrow Rd At Pemican Crt North Side",
+        "stopId": "7502",
+        "tag": "7872",
+        "lat": "43.7494399"
+      },
+      {
+        "lon": "-79.53414",
+        "title": "1111 Arrow Rd",
+        "stopId": "13457",
+        "tag": "5601",
+        "lat": "43.75119"
+      },
+      {
+        "lon": "-79.5359199",
+        "title": "Arrow Rd At Finch Ave West",
+        "stopId": "7497",
+        "tag": "7571",
+        "lat": "43.7530099"
+      },
+      {
+        "lon": "-79.52447",
+        "title": "Finch Ave West At Oakdale Rd (Humber River Hospital)",
+        "stopId": "2622",
+        "tag": "8505",
+        "lat": "43.7557599"
+      },
+      {
+        "lon": "-79.52083",
+        "title": "Finch Ave West At Elana Dr",
+        "stopId": "2597",
+        "tag": "8447",
+        "lat": "43.7566099"
+      },
+      {
+        "lon": "-79.5181599",
+        "title": "Finch Ave West At Jane St",
+        "stopId": "13709",
+        "tag": "624",
+        "lat": "43.75708"
+      },
+      {
+        "lon": "-79.51712",
+        "title": "Jane St At Firgrove Cres (North) South Side",
+        "stopId": "3892",
+        "tag": "8394",
+        "lat": "43.7545599"
+      },
+      {
+        "lon": "-79.51664",
+        "title": "2900 Jane St",
+        "stopId": "10447",
+        "tag": "10059",
+        "lat": "43.75265"
+      },
+      {
+        "lon": "-79.51609",
+        "title": "Jane St At Firgrove Cres (South) South Side",
+        "stopId": "3893",
+        "tag": "4521",
+        "lat": "43.75044"
+      },
+      {
+        "lon": "-79.5157799",
+        "title": "Jane St At Eddystone Ave",
+        "stopId": "3885",
+        "tag": "8780",
+        "lat": "43.7492399"
+      },
+      {
+        "lon": "-79.5151099",
+        "title": "Jane St At Frith Rd",
+        "stopId": "3894",
+        "tag": "2121",
+        "lat": "43.7465499"
+      },
+      {
+        "lon": "-79.5146599",
+        "title": "Jane St At Courage Ave South Side",
+        "stopId": "3876",
+        "tag": "1840",
+        "lat": "43.7447499"
+      },
+      {
+        "lon": "-79.51429",
+        "title": "Jane St At Stanley Rd",
+        "stopId": "3930",
+        "tag": "7974",
+        "lat": "43.74318"
+      },
+      {
+        "lon": "-79.51382",
+        "title": "Jane St At Clair Rd",
+        "stopId": "3873",
+        "tag": "3227",
+        "lat": "43.74136"
+      },
+      {
+        "lon": "-79.51339",
+        "title": "Jane St At Sheppard Ave West",
+        "tag": "2567_ar",
+        "lat": "43.73953"
+      }
+    ],
+    "title": "99-Arrow Road",
+    "lonMin": "-79.5359199",
+    "color": "ff0000",
+    "direction": [
+      {
+        "stop": [
+          { "tag": "8832" },
+          { "tag": "7872" },
+          { "tag": "5601" },
+          { "tag": "7571" },
+          { "tag": "8505" },
+          { "tag": "8447" },
+          { "tag": "624" },
+          { "tag": "8394" },
+          { "tag": "10059" },
+          { "tag": "4521" },
+          { "tag": "8780" },
+          { "tag": "2121" },
+          { "tag": "1840" },
+          { "tag": "7974" },
+          { "tag": "3227" },
+          { "tag": "2567_ar" }
+        ],
+        "title": "North - 99 Arrow Rd towards Jane",
+        "useForUI": "true",
+        "tag": "99_1_99",
+        "name": "North",
+        "branch": "99"
+      },
+      {
+        "stop": [
+          { "tag": "2567" },
+          { "tag": "7765" },
+          { "tag": "1351" },
+          { "tag": "2823" },
+          { "tag": "6161" },
+          { "tag": "5326" },
+          { "tag": "9294" },
+          { "tag": "7607" }
+        ],
+        "title": "South - 99 Arrow Rd towards Arrow Rd",
+        "useForUI": "true",
+        "tag": "99_0_99",
+        "name": "South",
+        "branch": "99"
+      }
+    ],
+    "tag": "99",
+    "path": [
+      {
+        "point": [
+          {
+            "lon": "-79.51339",
+            "lat": "43.73953"
+          },
+          {
+            "lon": "-79.5167",
+            "lat": "43.73871"
+          },
+          {
+            "lon": "-79.51997",
+            "lat": "43.73796"
+          },
+          {
+            "lon": "-79.52358",
+            "lat": "43.73715"
+          },
+          {
+            "lon": "-79.52932",
+            "lat": "43.73569"
+          },
+          {
+            "lon": "-79.52934",
+            "lat": "43.73632"
+          }
+        ]
+      },
+      {
+        "point": [
+          {
+            "lon": "-79.53026",
+            "lat": "43.7476399"
+          },
+          {
+            "lon": "-79.53257",
+            "lat": "43.74944"
+          },
+          {
+            "lon": "-79.53299",
+            "lat": "43.74965"
+          },
+          {
+            "lon": "-79.5341399",
+            "lat": "43.75119"
+          },
+          {
+            "lon": "-79.53581",
+            "lat": "43.75253"
+          },
+          {
+            "lon": "-79.53592",
+            "lat": "43.75301"
+          },
+          {
+            "lon": "-79.53625",
+            "lat": "43.7532799"
+          },
+          {
+            "lon": "-79.5244699",
+            "lat": "43.75576"
+          }
+        ]
+      },
+      {
+        "point": [
+          {
+            "lon": "-79.52934",
+            "lat": "43.73632"
+          },
+          {
+            "lon": "-79.52972",
+            "lat": "43.73782"
+          },
+          {
+            "lon": "-79.53064",
+            "lat": "43.7414599"
+          },
+          {
+            "lon": "-79.53084",
+            "lat": "43.74181"
+          },
+          {
+            "lon": "-79.53086",
+            "lat": "43.74205"
+          },
+          {
+            "lon": "-79.53079",
+            "lat": "43.74234"
+          },
+          {
+            "lon": "-79.53062",
+            "lat": "43.74259"
+          },
+          {
+            "lon": "-79.53037",
+            "lat": "43.7427599"
+          },
+          {
+            "lon": "-79.5300199",
+            "lat": "43.74292"
+          },
+          {
+            "lon": "-79.52963",
+            "lat": "43.7430499"
+          },
+          {
+            "lon": "-79.5293499",
+            "lat": "43.74325"
+          },
+          {
+            "lon": "-79.5292",
+            "lat": "43.74347"
+          },
+          {
+            "lon": "-79.52911",
+            "lat": "43.74378"
+          },
+          {
+            "lon": "-79.52937",
+            "lat": "43.74542"
+          }
+        ]
+      },
+      {
+        "point": [
+          {
+            "lon": "-79.5244699",
+            "lat": "43.75576"
+          },
+          {
+            "lon": "-79.52083",
+            "lat": "43.75661"
+          },
+          {
+            "lon": "-79.51896",
+            "lat": "43.75712"
+          },
+          {
+            "lon": "-79.51816",
+            "lat": "43.75708"
+          },
+          {
+            "lon": "-79.51772",
+            "lat": "43.75723"
+          },
+          {
+            "lon": "-79.51712",
+            "lat": "43.75456"
+          }
+        ]
+      },
+      {
+        "point": [
+          {
+            "lon": "-79.51712",
+            "lat": "43.75456"
+          },
+          {
+            "lon": "-79.51664",
+            "lat": "43.75265"
+          },
+          {
+            "lon": "-79.51609",
+            "lat": "43.75044"
+          },
+          {
+            "lon": "-79.51578",
+            "lat": "43.74924"
+          },
+          {
+            "lon": "-79.51511",
+            "lat": "43.74655"
+          },
+          {
+            "lon": "-79.51457",
+            "lat": "43.74488"
+          },
+          {
+            "lon": "-79.51466",
+            "lat": "43.74475"
+          },
+          {
+            "lon": "-79.51429",
+            "lat": "43.74318"
+          },
+          {
+            "lon": "-79.51382",
+            "lat": "43.74136"
+          },
+          {
+            "lon": "-79.51339",
+            "lat": "43.73953"
+          }
+        ]
+      }
+    ],
+    "lonMax": "-79.51339",
+    "oppositeColor": "ffffff",
+    "latMin": "43.7363199"
+  },
+  "copyright": "All data copyright Toronto Transit Commission 2018."
+}

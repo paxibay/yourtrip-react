@@ -1,0 +1,51 @@
+﻿{
+  "predictions": {
+    "agencyTitle": "Toronto Transit Commission",
+    "routeTag": "99",
+    "routeTitle": "99-Arrow Road",
+    "direction": {
+      "title": "North - 99 Arrow Rd towards Jane",
+      "prediction": [
+        {
+          "isDeparture": "true",
+          "minutes": "11",
+          "seconds": "680",
+          "tripTag": "36001181",
+          "vehicle": "8584",
+          "affectedByLayover": "true",
+          "block": "99_1_10",
+          "branch": "99",
+          "dirTag": "99_1_99",
+          "epochTime": "1518985260000"
+        },
+        {
+          "isDeparture": "true",
+          "minutes": "31",
+          "seconds": "1880",
+          "tripTag": "36001182",
+          "vehicle": "8584",
+          "affectedByLayover": "true",
+          "block": "99_1_10",
+          "branch": "99",
+          "dirTag": "99_1_99",
+          "epochTime": "1518986460000"
+        },
+        {
+          "isDeparture": "true",
+          "minutes": "51",
+          "seconds": "3080",
+          "tripTag": "36001183",
+          "vehicle": "8584",
+          "affectedByLayover": "true",
+          "block": "99_1_10",
+          "branch": "99",
+          "dirTag": "99_1_99",
+          "epochTime": "1518987660000"
+        }
+      ]
+    },
+    "stopTitle": "Arrow Rd At Deerhide Cres (South)",
+    "stopTag": "8832"
+  },
+  "copyright": "All data copyright Toronto Transit Commission 2018."
+}

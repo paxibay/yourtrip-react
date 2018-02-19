@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Header } from './components/Header';
-import { NextTrip } from './components/NextTrip';
-
+import { YourTrip } from './components/YourTrip';
 import './App.css';
 
 const App = () => (
+
   <div className="App">
     <Header />
-    <NextTrip />
+    <YourTrip />
   </div>
 );
 
