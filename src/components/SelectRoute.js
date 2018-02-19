@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Form } from 'semantic-ui-react'
+import { Container, Grid, Select } from 'semantic-ui-react'
 
 // import { countryOptions } from '../common'
 // [{ key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' }, ...{}]
@@ -14,12 +14,15 @@ const routeOptions = [
   }
 ]
 
-export const SelectRoute = () => (
-  <Form>
-    <Form.Field inline>
-      <label>First name</label>
+export const SelectRoute = ({ labelKey }) => (
+  <Grid.Row stretched>
+    <Grid.Column width={5} verticalAlign='middle'>
+      <Container textAlign='right'>
+        <label>{labelKey}</label>
+      </Container>
+    </Grid.Column>
+    <Grid.Column width={10}>
       <Select placeholder='Select' options={routeOptions} />
-    </Form.Field>
-  </Form>
+    </Grid.Column>
+  </Grid.Row>
 )
-

@@ -13,9 +13,15 @@ export class YourTrip extends React.Component {
   }
   
   componentDidMount() {
-    // Posts.fetch().then(posts => {
-    //   this.setState({ posts })
-    // })
+
+    fetch('json/route-list.json')
+      .then((response) => response.json())
+      .then((json) =>
+        console.log('parsed json', json)
+      ).catch(function (ex) {
+        console.log('parsing failed', ex)
+      })
+  
   }
 
   render() {
