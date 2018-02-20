@@ -1,19 +1,23 @@
 import * as types from './actionTypes';
 import routeApi from '../api/routeApi';
 
-export function loadListSuccess(routeList) {
-  return { type: types.LOAD_LIST_SUCCESS, routeList };
+export function loadRoutesSuccess(routes) {
+  return { type: types.LOAD_ROUTES_SUCCESS, routes };
 }
 
-export function loadStopsSuccess(routeStops) {
-  return { type: types.LOAD_STOPS_SUCCESS, routeStops };
+export function changeDirection(id) {
+  return { type: types.CHANGE_DIRECTION, id }; 
+}
+
+export function selectStop(id) {
+  return { type: types.SELECT_STOP, id };
 }
 
 // make async call to api, handle promise, dispatch action when promise is resolved
-export function loadRoutes() {
+export function loadRouteList() {
   return function (dispatch) {
-    return routeApi.fetchList().then(routeList => {
-      dispatch(loadListSuccess(routeList));
+    routeApi.fetchRoutes().then(routes => {
+      dispatch(loadRoutesSuccess(routes));
     }).catch(error => {
       throw (error);
     });

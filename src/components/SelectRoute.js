@@ -1,20 +1,7 @@
 import React from 'react';
-import { Container, Grid, Select } from 'semantic-ui-react'
+import { Container, Grid, Dropdown } from 'semantic-ui-react'
 
-// import { countryOptions } from '../common'
-// [{ key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' }, ...{}]
-const routeOptions = [
-  {
-    text: 'Jenny Hess',
-    value: 'Jenny Hess',
-  },
-  {
-    text: 'Payn Zhou',
-    value: 'Payn Zhou',
-  }
-]
-
-export const SelectRoute = ({ labelKey }) => (
+export const SelectRoute = ({ labelKey, options, onChange }) => (
   <Grid.Row stretched>
     <Grid.Column width={5} verticalAlign='middle'>
       <Container textAlign='right'>
@@ -22,7 +9,12 @@ export const SelectRoute = ({ labelKey }) => (
       </Container>
     </Grid.Column>
     <Grid.Column width={10}>
-      <Select placeholder='Select' options={routeOptions} />
+      <Dropdown placeholder='Select' fluid selection options={options} onChange={(e, { value }) => onChange(value)}  />
     </Grid.Column>
   </Grid.Row>
 )
+
+// <Select onChange={(e, { value }) => alert(value)} />
+// <Dropdown placeholder='Select' fluid selection options={options} onChange={(e, { value }) => onStopClick(value)} />
+// onClick={() => onTodoClick(todo.id)}
+// connectExample: https://gist.github.com/markerikson/121c77a01c453466361a9c6434a08620

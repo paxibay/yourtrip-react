@@ -1,17 +1,16 @@
 import { combineReducers } from 'redux';
-import { routeListReducer, routeStopsReducer} from './reducers';
+import {
+  routeListReducer,
+  changeRouteListReducer,
+  changeDirectionReducer,
+  selectStopReducer
+} from './reducers';
 
 const rootReducer = combineReducers({
   routeListReducer,
-  routeStopsReducer
+  changeRouteListReducer,
+  changeDirectionReducer,
+  selectStopReducer
 })
 
 export default rootReducer;
-
-
-
-//export const reducer = Redux.combineReducers({
-//  routeList: routeListReducer,
-//  //routeStops: routeStopsReducer,
-//  //stopPredication: stopPredicationReducer
-//});

@@ -4,10 +4,10 @@ import { Message } from 'semantic-ui-react'
 export const NextBus = () => (
   <Message>
     <Message.Header>
-      Changes in Service
+      not finished
     </Message.Header>
     <p>
-      We updated our privacy policy here to better service our customers. We recommend reviewing the changes.
+      in progress
     </p>
   </Message>
 );

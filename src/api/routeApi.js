@@ -1,6 +1,14 @@
 import 'whatwg-fetch';
 
 let routeApi = {
+  fetchRoutes() {
+    return fetch('json/routes.json')
+      .then(response =>
+        response.json())
+      .catch(ex =>
+        console.log('parsing failed', ex)
+      );
+  },
   fetchList() {
     //fetch('http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc')
     return fetch('json/route-list.json')

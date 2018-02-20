@@ -1,12 +1,5 @@
 export default {
-  routeList: [],
-  routeStops: [],
-  stopPredication: []
+  list: {},
+  stops: {},
+  predication: {}
 }
-
-
-//export const reducer = Redux.combineReducers({
-//  routeList: routeListReducer,
-//  routeStops: routeStopsReducer,
-//  stopPredication: stopPredicationReducer
-//});

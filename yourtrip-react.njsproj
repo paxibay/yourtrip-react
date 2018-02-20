@@ -49,13 +49,13 @@
     <Content Include="public\index.html" />
     <Content Include="public\json\route-list.json" />
     <Content Include="public\json\route-stops.json" />
+    <Content Include="public\json\routes.json" />
     <Content Include="public\json\stop-predication.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\manifest.json" />
     <Content Include="README.md" />
     <Content Include="src\App.css" />
-    <Content Include="src\support.txt" />
     <Content Include="src\index.css" />
     <Content Include="src\logo.svg" />
   </ItemGroup>
@@ -72,7 +72,6 @@
     <Compile Include="src\redux\actions.js" />
     <Compile Include="src\redux\actionTypes.js" />
     <Compile Include="src\redux\index.js" />
-    <Compile Include="src\redux\reducer.js" />
     <Compile Include="src\redux\state.js" />
     <Compile Include="src\redux\reducers.js" />
     <Compile Include="src\redux\store.js" />

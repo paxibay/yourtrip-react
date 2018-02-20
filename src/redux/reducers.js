@@ -1,35 +1,40 @@
-import * as Redux from 'redux'
 import * as types from './actionTypes';
-
 import initialState from './state';
-export function routeListReducer(state = initialState.routeList, action) {
+export function routeListReducer(state = initialState, action) {
   switch (action.type) {
-    case types.LOAD_LIST_SUCCESS:
-      console.log('action.routeList', action.routeList);
-      return action.routeList;
+    case types.LOAD_ROUTES_SUCCESS:
+      return Object.assign([], state, action.routes)
     default:
       return state;
   }
 }
 
-export function routeStopsReducer(state = initialState.routeStops, action) {
+export function changeRouteListReducer(state = {}, action) {
   switch (action.type) {
-    case types.LOAD_STOPS_SUCCESS:
-      console.log('action.routeStops', action.routeStops);
+    case types.CHANGE_ROUTELIST:
+      // TODO: 
       return state;
     default:
       return state;
   }
 }
 
-//function stopPredicationReducer(state = initialState.stopPredication, action = {}) {
-//  switch (action.type) {
-//    case types.PREDICATION_SUCCESS:
-//      console.log('action.routeList', action.stopPredication);
-//      return action.stopPredication
-//    default:
-//      return state;
-//  }
-//}
+export function changeDirectionReducer(state = {}, action) {
+  switch (action.type) {
+    case types.CHANGE_DIRECTION:
+      // TODO: 
+      return state;
+    default:
+      return state;
+  }
+}
 
-
+export function selectStopReducer(state = {}, action) {
+  switch (action.type) {
+    case types.SELECT_STOP:
+      // TODO: 
+      return state;
+    default:
+      return state;
+  }
+}
