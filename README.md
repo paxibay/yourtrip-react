@@ -4,10 +4,10 @@ This project was bootstrapped with Create React App.
 
 ## Technologies and tools used
 
-* Environment: React, ES6
-* UI control: Semantic UI React
-* State manager: Redux, React-Redux, redux-thunk
-* Data api: whatwg-fetch
+* Environment: `React`, `ES6`
+* UI control: `Semantic UI React`
+* State manager: `Redux`, `React-Redux`, `Redux Thunk`
+* Data api: `whatwg-fetch`
 * 
 
 ## Try It!
