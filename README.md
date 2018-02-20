@@ -2,13 +2,17 @@
 
 This project was bootstrapped with Create React App.
 
-## React client
+## Technologies and tools used
 
-* Run `npm start` after running `npm install`. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
-* this doc will be updated shortly.
+* Environment: React, ES6
+* UI control: Semantic UI React
+* State manager: Redux, React-Redux, redux-thunk
+* Data api: whatwg-fetch
+* 
 
 ## Try It!
 
 * Go to `yourtrip-react`
 * Run `npm install`
 * Run `npm start`
+* Navigate to `http://localhost:3000/`
