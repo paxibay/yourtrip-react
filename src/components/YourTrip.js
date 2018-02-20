@@ -6,11 +6,6 @@ import { Routes } from './Routes';
 import { NextBus } from './NextBus';
 
 class YourTrip extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
-
   render() {
     const { routeList, routeStopes, routeDirection } = this.props;
     const { onDirectionClick, onStopClick, onRouteClick } = this.props;

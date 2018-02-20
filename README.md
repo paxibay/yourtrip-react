@@ -8,7 +8,6 @@ This project was bootstrapped with Create React App.
 * UI control: `Semantic UI React`
 * State manager: `Redux`, `React-Redux`, `Redux Thunk`
 * Data api: `whatwg-fetch`
-* 
 
 ## Try It!
 
