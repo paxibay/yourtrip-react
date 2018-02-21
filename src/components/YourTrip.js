@@ -31,7 +31,7 @@ class YourTrip extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  //console.log('routeList', state.loadPredicationsReducer)
+  //console.log('routeListaa', state.loadStopsReducer);
   let routeList = state.loadRoutesReducer.routes;
   if (Array.isArray(routeList)) {
     routeList = routeList.map(route => {
@@ -44,9 +44,35 @@ const mapStateToProps = (state) => {
     });
   }
 
-  let routeStopes = state.loadStopsReducer.stops;
-  if (Array.isArray(routeStopes)) {
-    routeStopes = routeStopes.map(stop => {
+  let routeDirection = state.loadDirectionsReducer.directions;
+  let stopsGroup = [];
+  if (Array.isArray(routeDirection)) {
+    routeDirection = routeDirection.map(direction => {
+      stopsGroup.push(direction.stop);
+      return {
+        text: direction.name,
+        value: direction.name,
+        //"title": "South - 99 Arrow Rd towards Arrow Rd",
+        //"useForUI": "true",
+        //"tag": "99_0_99",
+        //"name": "South",
+        //"branch": "99"
+      }
+    });
+  }
+
+  let southStopes = state.loadStopsReducer.stops;
+  let northStopes = [];
+  if (Array.isArray(southStopes)) {
+    southStopes = southStopes.filter(stop => {
+      if (Array.isArray(stopsGroup[0])) {
+        let index = stopsGroup[0].find(s => s.tag == stop.tag);
+        if (index) {
+          return true;
+        }
+        northStopes.push(stop);
+      }
+    }).map(stop => {
       return {
         text: stop.title,
         value: stop.stopId,
@@ -59,20 +85,25 @@ const mapStateToProps = (state) => {
     });
   }
 
-  let routeDirection = state.loadDirectionsReducer.directions;
-  if (Array.isArray(routeDirection)) {
-    routeDirection = routeDirection.map(direction => {
+  if (Array.isArray(northStopes)) {
+    northStopes = northStopes.map(stop => {
       return {
-        text: direction.name,
-        value: direction.name,
-        //"title": "South - 99 Arrow Rd towards Arrow Rd",
-        //"useForUI": "true",
-        //"tag": "99_0_99",
-        //"name": "South",
-        //"branch": "99"
+        text: stop.title,
+        value: stop.stopId,
+        //lon: stop.lon,
+        //title: stop.title,
+        //stopId: stop.stopId,
+        //tag: stop.tag,
+        //lat: stop.lat
       }
     });
   }
+
+  console.log('southStopes', southStopes);
+  console.log('northStopes', northStopes);
+
+  let routeStopes = false ? southStopes : northStopes;
+
   return {
     routeList,
     routeStopes,

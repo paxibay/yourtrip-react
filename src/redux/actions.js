@@ -43,6 +43,12 @@ export function changeStop(stop) {
   };
 }
 
+export function extractStopGroups() {
+  return {
+    type: types.EXTRACT_GROUPS,
+  };
+}
+
 // make async call to api, handle promise, 
 // dispatch action when promise is resolved
 export function loadData() {
@@ -57,6 +63,7 @@ export function loadData() {
     );
   };
 }
+
 
 export function loadRoutes() {
   return function (dispatch) {
@@ -89,4 +96,5 @@ export function loadPrediction() {
     });
   };
 }
+
 

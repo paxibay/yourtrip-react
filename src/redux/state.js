@@ -5,7 +5,9 @@ export default {
   },
   stop: {
     loaded: false,
-    stops: []
+    stops: [],
+    north: [],
+    south:[]
   },
   direction: {
     loaded: false,

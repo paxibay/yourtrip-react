@@ -16,7 +16,7 @@ export function loadStopsReducer(state = initialState.stop, action) {
   switch (action.type) {
     case types.LOAD_STOPS_SUCCESS:
       if (!state.loaded) {
-        return Object.assign({}, { loaded: true, stops: action.stops });
+        return Object.assign({}, { loaded: true, stops: action.stops, nouth: action.stops, south: action.stops });
       }
       return state;
     default:
@@ -62,6 +62,17 @@ export function changeStopReducer(state = {}, action) {
   switch (action.type) {
     case types.CHANGE_STOP:
       alert('changeStopReducer');
+      return state;
+    default:
+      return state;
+  }
+}
+
+export function extractGroupsReducer(state = initialState, action) {
+  switch (action.type) {
+    case types.EXTRACT_GROUPS:
+      //console.log('routeList', state)
+      //alert('EXTRACT_GROUPS');
       return state;
     default:
       return state;
