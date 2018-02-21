@@ -8,11 +8,11 @@ import './index.css';
 
 import App from './App';
 import configureStore from './redux/store';
-import { loadRouteList } from './redux/actions';
+import { loadData } from './redux/actions';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = configureStore();
-store.dispatch(loadRouteList());
+store.dispatch(loadData());
 
 ReactDOM.render(
   <Provider store={store}>

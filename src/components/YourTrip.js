@@ -9,8 +9,7 @@ class YourTrip extends React.Component {
   render() {
     const { routeList, routeStopes, routeDirection } = this.props;
     const { onDirectionClick, onStopClick, onRouteClick } = this.props;
-
-    console.log('Array', routeDirection)
+    
     return (
       <Grid container>
         <Grid.Column width={3} />
@@ -32,7 +31,8 @@ class YourTrip extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  let routeList = state.routeListReducer.list.route;
+  //console.log('routeList', state.loadPredicationsReducer)
+  let routeList = state.loadRoutesReducer.routes;
   if (Array.isArray(routeList)) {
     routeList = routeList.map(route => {
       return {
@@ -43,7 +43,8 @@ const mapStateToProps = (state) => {
       }
     });
   }
-  let routeStopes = Object.assign([], state.routeListReducer.stops.route).stop;
+
+  let routeStopes = state.loadStopsReducer.stops;
   if (Array.isArray(routeStopes)) {
     routeStopes = routeStopes.map(stop => {
       return {
@@ -57,7 +58,8 @@ const mapStateToProps = (state) => {
       }
     });
   }
-  let routeDirection = Object.assign([], state.routeListReducer.stops.route).direction;
+
+  let routeDirection = state.loadDirectionsReducer.directions;
   if (Array.isArray(routeDirection)) {
     routeDirection = routeDirection.map(direction => {
       return {
@@ -74,7 +76,7 @@ const mapStateToProps = (state) => {
   return {
     routeList,
     routeStopes,
-    routeDirection,
+    routeDirection
   };
 };
 
@@ -88,7 +90,7 @@ const mapDispatchToProps = (dispatch) => (
     ), 
     onStopClick: (id) => (
       dispatch({
-        type: 'SELECT_STOP',
+        type: 'CHANGE_STOP',
         id: id,
       })
     ),
@@ -104,4 +106,3 @@ export const YourNextTrip = connect(
   mapStateToProps,
   mapDispatchToProps
 )(YourTrip);
-
