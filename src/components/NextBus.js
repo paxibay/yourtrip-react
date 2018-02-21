@@ -1,13 +1,14 @@
 import React from 'react';
 import { Message } from 'semantic-ui-react'
 
-export const NextBus = () => (
+export const NextBus = ({ minutes }) => (
   <Message>
     <Message.Header>
-      not finished
+      ARRIVES IN
     </Message.Header>
-    <p>
-      in progress
-    </p>
+    <br/>
+    <div>
+      {minutes != -1 && `${minutes} Min`}
+    </div>
   </Message>
 );

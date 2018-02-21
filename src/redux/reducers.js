@@ -48,11 +48,10 @@ export function loadPredicationsReducer(state = initialState.predications, actio
   }
 }
 
-export function changeDirectionReducer(state = {}, action) {
+export function changeDirectionReducer(state = initialState.currentDir, action) {
   switch (action.type) {
     case types.CHANGE_DIRECTION:
-      alert('changeDirectionReducer');
-      return state;
+      return action.direction;
     default:
       return state;
   }
@@ -61,18 +60,7 @@ export function changeDirectionReducer(state = {}, action) {
 export function changeStopReducer(state = {}, action) {
   switch (action.type) {
     case types.CHANGE_STOP:
-      alert('changeStopReducer');
-      return state;
-    default:
-      return state;
-  }
-}
-
-export function extractGroupsReducer(state = initialState, action) {
-  switch (action.type) {
-    case types.EXTRACT_GROUPS:
-      //console.log('routeList', state)
-      //alert('EXTRACT_GROUPS');
+      //alert('changeStopReducer');
       return state;
     default:
       return state;

@@ -7,7 +7,7 @@ export default {
     loaded: false,
     stops: [],
     north: [],
-    south:[]
+    south: []
   },
   direction: {
     loaded: false,
@@ -16,5 +16,6 @@ export default {
   predications: {
     loaded: false,
     direction: {}
-  }
+  },
+  currentDir: ''
 }

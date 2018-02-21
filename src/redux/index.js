@@ -6,7 +6,6 @@ import {
   loadPredicationsReducer,
   changeStopReducer,
   changeDirectionReducer,
-  extractGroupsReducer
 } from './reducers';
 
 const rootReducer = combineReducers({
@@ -16,7 +15,6 @@ const rootReducer = combineReducers({
   loadPredicationsReducer,
   changeStopReducer,
   changeDirectionReducer,
-  extractGroupsReducer
 })
 
 export default rootReducer;

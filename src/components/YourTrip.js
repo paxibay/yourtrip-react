@@ -7,7 +7,7 @@ import { NextBus } from './NextBus';
 
 class YourTrip extends React.Component {
   render() {
-    const { routeList, routeStopes, routeDirection } = this.props;
+    const { routeList, routeStopes, routeDirection, minutes } = this.props;
     const { onDirectionClick, onStopClick, onRouteClick } = this.props;
     
     return (
@@ -22,7 +22,7 @@ class YourTrip extends React.Component {
             onDirectionClick={onDirectionClick}
             onStopClick={onStopClick}
           />
-          <NextBus />
+          <NextBus minutes={minutes}/>
         </Grid.Column>
         <Grid.Column width={3} />
       </Grid>
@@ -31,15 +31,12 @@ class YourTrip extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  //console.log('routeListaa', state.loadStopsReducer);
   let routeList = state.loadRoutesReducer.routes;
   if (Array.isArray(routeList)) {
     routeList = routeList.map(route => {
       return {
         text: route.title,
         value: route.title,
-        //title: route.title,
-        //tag: route.tag
       }
     });
   }
@@ -52,11 +49,6 @@ const mapStateToProps = (state) => {
       return {
         text: direction.name,
         value: direction.name,
-        //"title": "South - 99 Arrow Rd towards Arrow Rd",
-        //"useForUI": "true",
-        //"tag": "99_0_99",
-        //"name": "South",
-        //"branch": "99"
       }
     });
   }
@@ -66,21 +58,17 @@ const mapStateToProps = (state) => {
   if (Array.isArray(southStopes)) {
     southStopes = southStopes.filter(stop => {
       if (Array.isArray(stopsGroup[0])) {
-        let index = stopsGroup[0].find(s => s.tag == stop.tag);
+        let index = stopsGroup[0].find(s => s.tag === stop.tag);
         if (index) {
           return true;
         }
         northStopes.push(stop);
+        return false;
       }
     }).map(stop => {
       return {
         text: stop.title,
         value: stop.stopId,
-        //lon: stop.lon,
-        //title: stop.title,
-        //stopId: stop.stopId,
-        //tag: stop.tag,
-        //lat: stop.lat
       }
     });
   }
@@ -90,33 +78,33 @@ const mapStateToProps = (state) => {
       return {
         text: stop.title,
         value: stop.stopId,
-        //lon: stop.lon,
-        //title: stop.title,
-        //stopId: stop.stopId,
-        //tag: stop.tag,
-        //lat: stop.lat
       }
     });
   }
 
-  console.log('southStopes', southStopes);
-  console.log('northStopes', northStopes);
+  let predictions = state.loadPredicationsReducer.direction.prediction;
+  let minutes = -1;
+  if (Array.isArray(predictions)) {
+    predictions = predictions.map(prediction => prediction.minutes);
+    minutes = predictions[0];
+  }
 
-  let routeStopes = false ? southStopes : northStopes;
+  let routeStopes = state.changeDirectionReducer === 'South' ? southStopes : northStopes;
 
   return {
     routeList,
     routeStopes,
-    routeDirection
+    routeDirection,
+    minutes
   };
 };
 
 const mapDispatchToProps = (dispatch) => (
   {
-    onDirectionClick: (id) => (
+    onDirectionClick: (direction) => (
       dispatch({
         type: 'CHANGE_DIRECTION',
-        id: id,
+        direction: direction,
       })
     ), 
     onStopClick: (id) => (
