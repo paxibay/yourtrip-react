@@ -63,8 +63,8 @@ const mapStateToProps = (state) => {
           return true;
         }
         northStopes.push(stop);
-        return false;
       }
+      return false;
     }).map(stop => {
       return {
         text: stop.title,

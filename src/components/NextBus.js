@@ -8,7 +8,7 @@ export const NextBus = ({ minutes }) => (
     </Message.Header>
     <br/>
     <div>
-      {minutes != -1 && `${minutes} Min`}
+      {minutes !== -1 && `${minutes} Min`}
     </div>
   </Message>
 );
