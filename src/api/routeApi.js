@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-
 let routeApi = {
   fetchList() {
     //fetch('http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc')
